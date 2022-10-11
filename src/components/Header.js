@@ -20,7 +20,7 @@ const Header = () => {
                     </ul>
                 </div>
             </div>
-            <div className="hero h-72 bg-base-200">
+            <div className="hero h-auto bg-base-200 py-20">
                 <div className="hero-content text-center">
                     <p className="text-3xl font-bold py-6">Knowledge Checker is a QUIZ site where you can check your knowledge with some limited quiz of selected topics. If you want to check your knowledge depth then select a topics from bottom and check yourself with quizes.</p>
                 </div>
