@@ -7,7 +7,7 @@ This is an basic knowledge checking Web Application. You can check your depth of
 
 ## Features I have implemented
 * Create Home page where will display all subjects that you can examine yourself
-* Create full route structure by which you can you all the pages of this website
+* Create full route structure by which you can visit all pages of this website
 * This is responsive site that you can see this website nicely with all small medium and large device.
-* I have added for display alert gorgeously.
+* I have added toastify for display alert gorgeously.
 

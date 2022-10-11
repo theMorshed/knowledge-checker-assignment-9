@@ -5,6 +5,7 @@ const customId = "custom-id-yes";
 
 const SingleQuiz = ({ id, quiz, index }) => {
     const { question, options, correctAnswer } = quiz;   
+
     const rightAnswer = () => toast(`Correct Answer is: ${correctAnswer}`, {
         toastId: customId
     });
