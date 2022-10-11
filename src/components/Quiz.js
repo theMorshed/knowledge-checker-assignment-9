@@ -8,7 +8,7 @@ const Quiz = () => {
     return (
         <div>
             {
-                quizes.map(quiz => <SingleQuiz key={quiz.id} quiz={quiz} />)
+                quizes.map((quiz, index) => <SingleQuiz key={quiz.id} quiz={quiz} index={index} />)
             }
         </div>
     );
