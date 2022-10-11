@@ -6,7 +6,6 @@ import 'react-toastify/dist/ReactToastify.css';
 const SingleQuiz = ({ quiz, index }) => {
     const { question, options, correctAnswer } = quiz;
     const answer = () => toast(correctAnswer);
-    console.log(correctAnswer);
     return (
         <div className='mb-4'>
             <div className='flex justify-between'>
