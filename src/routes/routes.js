@@ -13,6 +13,11 @@ export const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
             {
+                path: '/',
+                loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+                element: <Subjects />
+            },
+            {
                 path: '/home',
                 loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
                 element: <Subjects />
