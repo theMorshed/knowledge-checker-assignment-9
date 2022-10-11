@@ -7,7 +7,7 @@ const ErrorPage = () => {
     return (
         <div className='w-4/5 mx-auto'>
             <Header />
-            <p className='text-3xl text-center mt-5 text-red-500 font-semibold'>{error.status} - {error.statusText}</p>
+            <p className='mt-20 text-3xl text-center mt-5 text-red-500 font-semibold'>{error.status} - {error.statusText}::: Sorry! This route is not exist, Please select another route from our navigation bar and enjoy yourself..</p>
         </div>
     );
 };

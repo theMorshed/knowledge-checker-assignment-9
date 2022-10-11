@@ -13,11 +13,6 @@ const Quiz = () => {
                         questions.map((quiz, index) => <SingleQuiz key={quiz.id} id={quiz.id} quiz={quiz} index={index} />)
                     }
                 </div>
-                {/* <div className="w-1/4 ml-4 text-center">
-                    <h2 className='text-2xl font-semibold'>Your State here</h2>
-                    <p className='text-xl text-primary font-normal'>Right Answer: {}</p>
-                    <p className='text-xl text-primary font-normal'>Wrong Answer: {}</p>
-                </div> */}
             </div>
         </div>
     );

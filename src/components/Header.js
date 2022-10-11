@@ -1,22 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
         <div>
             <div className="navbar bg-base-100">
                 <div className="flex-1">
-                    <Link to="/home" className="normal-case text-xl">Knowledge Checker</Link>
+                    <NavLink to="/home" className="text-3xl my-10 text-center font-semibold text-primary">Knowledge Checker</NavLink>
                 </div>
                 <div className="flex-none">
                     <ul className="menu menu-horizontal p-0">
-                        <li><Link to="/home">Home</Link></li>
-                        <li tabIndex="0">
-                            <Link to="/statistics">
-                                Statistics
-                            </Link>
-                        </li>
-                        <li><Link to="/blog">Blog</Link></li>
+                        <li><NavLink className={({ isActive }) =>
+                            isActive ? 'text-primary font-semibold' : undefined
+                        } to="/home">Home</NavLink></li>
+                        <li> <NavLink className={({ isActive }) =>
+                            isActive ? 'text-primary font-semibold' : undefined
+                        } to="/statistics">Statistics</NavLink></li>
+                        <li><NavLink className={({ isActive }) =>
+                            isActive ? 'text-primary font-semibold' : undefined
+                        } to="/blog">Blog</NavLink></li>
                     </ul>
                 </div>
             </div>            

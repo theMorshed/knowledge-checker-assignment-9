@@ -11,7 +11,7 @@ const Subject = ({ subject }) => {
                     <h2 className="card-title">{name}</h2>
                     <p>Total Quiz: {total}</p>
                     <div className="card-actions justify-end">
-                        <Link to={`/api/quiz/${id}`} className="btn btn-primary">Goto Quiz</Link>
+                        <Link to={`/quiz/${id}`} className="btn btn-primary">Goto Quiz</Link>
                     </div>
                 </div>
             </div>
