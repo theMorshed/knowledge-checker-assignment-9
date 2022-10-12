@@ -6,7 +6,7 @@ const Quiz = () => {
     const quizData = useLoaderData();
     const questions = quizData.data.questions;
     const [userAnswer, setUserAnswer] = useState([]);
-    let correctAnswerCount = 0, wrongAnswerCout = 0;
+    let correctAnswerCount = 0;
     let allCorrectAnswer = [];
     for (const correct of questions) {
         allCorrectAnswer.push(correct.correctAnswer);
@@ -21,7 +21,6 @@ const Quiz = () => {
             }
         }
     }
-    wrongAnswerCout = allCorrectAnswer.length - correctAnswerCount;
     return (
         <div>
             <p className='text-3xl my-10 text-center font-semibold text-primary'>Quizes of {quizData.data.name}</p>
@@ -29,7 +28,6 @@ const Quiz = () => {
                 <div className='w-full md:w-1/4 text-left mb-10'>
                     <h2 className='text-xl text-primary font-semibold mb-5'>Your Exam State</h2>
                     <p className='text-lg'>Right Answer: <span className='text-primary font-semibold ml-3'>{correctAnswerCount}</span></p>
-                    <p className='text-lg'>Wrong Answer: <span className='text-red-500 font-semibold ml-3'>{wrongAnswerCout}</span></p>
                 </div>
                 <div className='w-full md:w-3/4 mx-auto'>
                     {
