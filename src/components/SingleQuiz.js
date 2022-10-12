@@ -1,9 +1,9 @@
 import { EyeIcon } from '@heroicons/react/24/solid';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const customId = "custom-id-yes";
+const customId = "custom-id";
 
-const SingleQuiz = ({ id, quiz, index }) => {
+const SingleQuiz = ({ id, quiz, index, handleCorrectAnswer }) => {
     const { question, options, correctAnswer } = quiz;
 
     const rightAnswer = () => toast(`Correct Answer is: ${correctAnswer}`, {
@@ -16,13 +16,14 @@ const SingleQuiz = ({ id, quiz, index }) => {
                     toastId: customId
                 });
             })();
+            handleCorrectAnswer(selectedAnswer);
         } else {
             (() => {
                 toast('You have selected a wrong answer', {
                     toastId: customId
                 });
             })();
-        }
+        }        
     }
 
     return (
@@ -45,8 +46,7 @@ const SingleQuiz = ({ id, quiz, index }) => {
                         );
                     })
                 }
-            </form>
-
+            </form>            
         </div>
     );
 };
