@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const customId = "custom-id-yes";
 
 const SingleQuiz = ({ id, quiz, index }) => {
-    const { question, options, correctAnswer } = quiz;   
+    const { question, options, correctAnswer } = quiz;
 
     const rightAnswer = () => toast(`Correct Answer is: ${correctAnswer}`, {
         toastId: customId
@@ -24,13 +24,13 @@ const SingleQuiz = ({ id, quiz, index }) => {
             })();
         }
     }
-    
+
     return (
         <div className='mb-4 border border-primary rounded p-4 shadow-lg bg-slate-200 text-primary'>
             <div className='relative'>
                 <p className='text-2xl font-bold mr-10'>Quiz {index + 1}: {question}</p>
-                <EyeIcon onClick={rightAnswer} className="ml-5 w-8 h-8 text-primary cursor-pointer absolute top-0 right-0" /> 
-                <ToastContainer />
+                <EyeIcon onClick={rightAnswer} className="ml-5 w-8 h-8 text-primary cursor-pointer absolute top-0 right-0" />
+                <ToastContainer autoClose={2000} />
             </div>
             <form action="">
                 {
@@ -43,10 +43,10 @@ const SingleQuiz = ({ id, quiz, index }) => {
                                 </label>
                             </div>
                         );
-                    })                      
-                }                  
+                    })
+                }
             </form>
-            
+
         </div>
     );
 };
