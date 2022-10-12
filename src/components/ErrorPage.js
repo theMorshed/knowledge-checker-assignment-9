@@ -5,7 +5,7 @@ import Header from './Header';
 const ErrorPage = () => {
     const error = useRouteError();
     return (
-        <div className='w-full md:w-3/5 mx-auto'>
+        <div className='w-4/5 mx-auto'>
             <Header />
             <div className='text-center'>
                 <p className='mt-20 text-3xl text-red-500 font-semibold'>{error.status} - {error.statusText}</p>
