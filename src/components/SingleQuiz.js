@@ -27,7 +27,7 @@ const SingleQuiz = ({ id, quiz, index }) => {
 
     return (
         <div className='mb-4 border border-primary rounded p-4 shadow-lg bg-slate-200 text-primary'>
-            <div className='relative'>
+            <div className='relative mb-5'>
                 <p className='text-2xl font-bold mr-10'>Quiz {index + 1}: {question}</p>
                 <EyeIcon onClick={rightAnswer} className="ml-5 w-8 h-8 text-primary cursor-pointer absolute top-0 right-0" />
                 <ToastContainer autoClose={2000} />
@@ -39,7 +39,7 @@ const SingleQuiz = ({ id, quiz, index }) => {
                             <div key={index} className="form-control">
                                 <label onClick={() => handleAnswer(option)} className="label cursor-pointer justify-start">
                                     <input type="radio" name="radio-6" className="radio checked:bg-primary" />
-                                    <span className="label-text ml-3">{option}</span>
+                                    <span className="label-text ml-3 text-primary">{option}</span>
                                 </label>
                             </div>
                         );
